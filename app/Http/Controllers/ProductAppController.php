@@ -13,12 +13,12 @@ class ProductAppController extends BaseController
 {
     public function productlist($id)
     {
-		$products = Product::where('category',$id)->get();
 		/*
-		$products = DB::select('
-		SELECT products.id,products.name,products.size,products.price,products.discount,products.brand,products.stock,0 as qty
-		FROM products
-		WHERE category="'.$id.'"');		
+		$products = Product::where('category',$id)->get();
+		*/
+		
+		$products = DB::table('products')->select('id','name','size','price','discount','brand','stock','0 as qty')
+		->where('category',$id)->get();
 		
 		/*
 		$products = DB::table('products')->join('file_uploads','products.id','=','file_uploads.productId')
