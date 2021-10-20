@@ -14,11 +14,8 @@ class ProductAppController extends BaseController
     public function productlist($id)
     {
 		$products = DB::select('
-		SELECT products.id,products.name,products.size,products.price,products.discount,products.brand,products.stock,0 as qty,temp.file_name
+		SELECT products.id,products.name,products.size,products.price,products.discount,products.brand,products.stock,0 as qty
 		FROM products
-		INNER JOIN
-		((SELECT productId,MAX(filename) as file_name FROM file_uploads GROUP BY productId) AS temp)
-		ON(temp.productId = products.id)
 		WHERE category="'.$id.'"');		
 		
 		/*
