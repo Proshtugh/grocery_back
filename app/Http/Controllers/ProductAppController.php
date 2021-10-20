@@ -13,6 +13,8 @@ class ProductAppController extends BaseController
 {
     public function productlist($id)
     {
+		$products = Product::where('category',$id)->get();
+		/*
 		$products = DB::select('
 		SELECT products.id,products.name,products.size,products.price,products.discount,products.brand,products.stock,0 as qty
 		FROM products
