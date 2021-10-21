@@ -18,7 +18,7 @@ class CreateOrderDtlsTable extends Migration
 			$table->integer('orderId');
 			$table->integer('productId');
 			$table->integer('quantity');
-			$table->integer('price');		
+			$table->float('price');		
             $table->timestamps();
         });
     }
