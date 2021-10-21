@@ -17,7 +17,7 @@ class ProductAppController extends BaseController
 		$products = Product::where('category',$id)->get();
 		*/
 		
-		$products = DB::table('products')->select('id','name','size','price','discount','brand','stock','0 as qty')
+		$products = DB::table('products')->select('id','name','size','price','discount','brand','stock',DB::raw('0 as qty'))
 		->where('category',$id)->get();
 		
 		/*
