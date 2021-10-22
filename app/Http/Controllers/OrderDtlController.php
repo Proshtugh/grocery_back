@@ -65,13 +65,8 @@ class OrderDtlController extends BaseController
      */
     public function show($id)
     {
-		$orders = DB::select('
-		SELECT products.*, order_dtls.quantity, order_dtls.price
-		FROM order_dtls
-		INNER JOIN
-		(products)
-		ON(order_dtls.productId = products.id)
-		WHERE orderId='.$id);
+		$orders = DB::table('order_dtls')->join('products','order_dtls.productId','=','order_dtls.productId = products.id')
+		->select('products.*', 'order_dtls.quantity', 'order_dtls.price')->where('orderId',$id)->get();
 		
 		if (is_null($orders)) {
             return $this->sendError('Order does not exist.');
