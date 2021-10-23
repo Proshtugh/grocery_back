@@ -39,6 +39,7 @@ Route::middleware('auth:sanctum')->group( function () {
 });
 
 Route::get('productcategory/{id}', "App\Http\Controllers\ProductAppController@productlist");
+Route::get('landcategory', "App\Http\Controllers\ProductAppController@categorylist_4");
 
 Route::middleware('auth:sanctum')->group( function () {
     Route::resource('orders', OrderController::class);
