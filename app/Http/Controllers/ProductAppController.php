@@ -56,4 +56,20 @@ class ProductAppController extends BaseController
         */
         return $products;
     }
+	
+	public function productAll()
+    {
+		/*
+		$products = Product::where('category',$id)->get();
+		*/
+		
+		$products = DB::table('products')->select('id','name','size','price','discount','brand','stock',DB::raw('0 as qty'))
+		->get();
+		
+		/*
+		$products = DB::table('products')->join('file_uploads','products.id','=','file_uploads.productId')
+		->select('products.id','products.name','file_uploads.filename')->where('category',$id)->get();		
+        */
+        return $products;
+    }
 }
