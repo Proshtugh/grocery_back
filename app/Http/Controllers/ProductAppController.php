@@ -8,7 +8,6 @@ use Validator;
 use App\Http\Resources\ProductAppResource;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\BaseController as BaseController;
-use App\Http\Resources\Category as CategoryResource;
 
 class ProductAppController extends BaseController
 {
@@ -40,6 +39,6 @@ class ProductAppController extends BaseController
 		$products = DB::table('products')->join('file_uploads','products.id','=','file_uploads.productId')
 		->select('products.id','products.name','file_uploads.filename')->where('category',$id)->get();		
         */
-        return $this->sendResponse(new CategoryResource($products), 'Created.');
+        return $products;
     }
 }
