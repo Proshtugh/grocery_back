@@ -33,7 +33,7 @@ class ProductAppController extends BaseController
 		$products = Product::where('category',$id)->get();
 		*/
 		
-		$products = DB::table('categories')->take(2)->get();
+		$products = DB::table('categories')->take(5)->get();
 		
 		/*
 		$products = DB::table('products')->join('file_uploads','products.id','=','file_uploads.productId')
