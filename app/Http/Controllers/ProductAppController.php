@@ -27,7 +27,7 @@ class ProductAppController extends BaseController
         return $products;
     }
 	
-	public function categorylist_4($id)
+	public function categorylist_4()
     {
 		/*
 		$products = Product::where('category',$id)->get();
