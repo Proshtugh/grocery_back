@@ -39,7 +39,9 @@ Route::middleware('auth:sanctum')->group( function () {
 });
 
 Route::get('productcategory/{id}', "App\Http\Controllers\ProductAppController@productlist");
-Route::get('landcategory', "App\Http\Controllers\ProductAppController@categorylist_4");
+Route::get('landcategory3', "App\Http\Controllers\ProductAppController@categorylist_3");
+Route::get('landcategory6', "App\Http\Controllers\ProductAppController@categorylist_6");
+Route::get('landcategory9', "App\Http\Controllers\ProductAppController@categorylist_9");
 Route::get('landproduct', "App\Http\Controllers\ProductAppController@productlist_8");
 Route::get('productall', "App\Http\Controllers\ProductAppController@productAll");
 

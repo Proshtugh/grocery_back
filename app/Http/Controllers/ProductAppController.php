@@ -27,13 +27,43 @@ class ProductAppController extends BaseController
         return $products;
     }
 	
-	public function categorylist_4()
+	public function categorylist_3()
     {
 		/*
 		$products = Product::where('category',$id)->get();
 		*/
 		
-		$products = DB::table('categories')->take(5)->get();
+		$products = DB::table('categories')->take(3)->get();
+		
+		/*
+		$products = DB::table('products')->join('file_uploads','products.id','=','file_uploads.productId')
+		->select('products.id','products.name','file_uploads.filename')->where('category',$id)->get();		
+        */
+        return $products;
+    }
+	
+	public function categorylist_6()
+    {
+		/*
+		$products = Product::where('category',$id)->get();
+		*/
+		
+		$products = DB::table('categories')->skip(3)->take(3)->get();
+		
+		/*
+		$products = DB::table('products')->join('file_uploads','products.id','=','file_uploads.productId')
+		->select('products.id','products.name','file_uploads.filename')->where('category',$id)->get();		
+        */
+        return $products;
+    }
+	
+	public function categorylist_9()
+    {
+		/*
+		$products = Product::where('category',$id)->get();
+		*/
+		
+		$products = DB::table('categories')->skip(6)->take(3)->get();
 		
 		/*
 		$products = DB::table('products')->join('file_uploads','products.id','=','file_uploads.productId')
