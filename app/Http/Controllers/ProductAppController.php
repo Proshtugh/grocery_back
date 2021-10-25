@@ -72,6 +72,111 @@ class ProductAppController extends BaseController
         return $products;
     }
 	
+	public function categorylist_12()
+    {
+		/*
+		$products = Product::where('category',$id)->get();
+		*/
+		
+		$products = DB::table('categories')->skip(9)->take(3)->get();
+		
+		/*
+		$products = DB::table('products')->join('file_uploads','products.id','=','file_uploads.productId')
+		->select('products.id','products.name','file_uploads.filename')->where('category',$id)->get();		
+        */
+        return $products;
+    }
+	
+	public function categorylist_15()
+    {
+		/*
+		$products = Product::where('category',$id)->get();
+		*/
+		
+		$products = DB::table('categories')->skip(12)->take(3)->get();
+		
+		/*
+		$products = DB::table('products')->join('file_uploads','products.id','=','file_uploads.productId')
+		->select('products.id','products.name','file_uploads.filename')->where('category',$id)->get();		
+        */
+        return $products;
+    }
+	
+	public function categorylist_18()
+    {
+		/*
+		$products = Product::where('category',$id)->get();
+		*/
+		
+		$products = DB::table('categories')->skip(15)->take(3)->get();
+		
+		/*
+		$products = DB::table('products')->join('file_uploads','products.id','=','file_uploads.productId')
+		->select('products.id','products.name','file_uploads.filename')->where('category',$id)->get();		
+        */
+        return $products;
+    }
+	
+	public function categorylist_21()
+    {
+		/*
+		$products = Product::where('category',$id)->get();
+		*/
+		
+		$products = DB::table('categories')->skip(18)->take(3)->get();
+		
+		/*
+		$products = DB::table('products')->join('file_uploads','products.id','=','file_uploads.productId')
+		->select('products.id','products.name','file_uploads.filename')->where('category',$id)->get();		
+        */
+        return $products;
+    }
+	
+	public function categorylist_24()
+    {
+		/*
+		$products = Product::where('category',$id)->get();
+		*/
+		
+		$products = DB::table('categories')->skip(21)->take(3)->get();
+		
+		/*
+		$products = DB::table('products')->join('file_uploads','products.id','=','file_uploads.productId')
+		->select('products.id','products.name','file_uploads.filename')->where('category',$id)->get();		
+        */
+        return $products;
+    }
+	
+	public function categorylist_27()
+    {
+		/*
+		$products = Product::where('category',$id)->get();
+		*/
+		
+		$products = DB::table('categories')->skip(24)->take(3)->get();
+		
+		/*
+		$products = DB::table('products')->join('file_uploads','products.id','=','file_uploads.productId')
+		->select('products.id','products.name','file_uploads.filename')->where('category',$id)->get();		
+        */
+        return $products;
+    }
+	
+	public function categorylist_30()
+    {
+		/*
+		$products = Product::where('category',$id)->get();
+		*/
+		
+		$products = DB::table('categories')->skip(27)->take(3)->get();
+		
+		/*
+		$products = DB::table('products')->join('file_uploads','products.id','=','file_uploads.productId')
+		->select('products.id','products.name','file_uploads.filename')->where('category',$id)->get();		
+        */
+        return $products;
+    }	
+	
 	public function productlist_8()
     {
 		/*

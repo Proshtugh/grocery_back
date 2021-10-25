@@ -42,6 +42,13 @@ Route::get('productcategory/{id}', "App\Http\Controllers\ProductAppController@pr
 Route::get('landcategory3', "App\Http\Controllers\ProductAppController@categorylist_3");
 Route::get('landcategory6', "App\Http\Controllers\ProductAppController@categorylist_6");
 Route::get('landcategory9', "App\Http\Controllers\ProductAppController@categorylist_9");
+Route::get('landcategory12', "App\Http\Controllers\ProductAppController@categorylist_12");
+Route::get('landcategory15', "App\Http\Controllers\ProductAppController@categorylist_15");
+Route::get('landcategory18', "App\Http\Controllers\ProductAppController@categorylist_18");
+Route::get('landcategory21', "App\Http\Controllers\ProductAppController@categorylist_21");
+Route::get('landcategory24', "App\Http\Controllers\ProductAppController@categorylist_24");
+Route::get('landcategory27', "App\Http\Controllers\ProductAppController@categorylist_27");
+Route::get('landcategory30', "App\Http\Controllers\ProductAppController@categorylist_30");
 Route::get('landproduct', "App\Http\Controllers\ProductAppController@productlist_8");
 Route::get('productall', "App\Http\Controllers\ProductAppController@productAll");
 
