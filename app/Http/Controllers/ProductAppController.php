@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Customer;
 use Illuminate\Http\Request;
 use Validator;
 use App\Http\Resources\ProductAppResource;
+use App\Http\Resources\Customer as CustomerResource;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\BaseController as BaseController;
 
@@ -206,5 +208,12 @@ class ProductAppController extends BaseController
 		->select('products.id','products.name','file_uploads.filename')->where('category',$id)->get();		
         */
         return $products;
+    }
+	
+	public function userData(Request $request)
+    {
+		$user = $request->user();
+        $cust = Customer::where('id', '=', $user->id)->get();
+        return $this->sendResponse(CustomerResource::collection($cust), 'Customer fetched.');
     }
 }

@@ -51,6 +51,7 @@ Route::get('landcategory27', "App\Http\Controllers\ProductAppController@category
 Route::get('landcategory30', "App\Http\Controllers\ProductAppController@categorylist_30");
 Route::get('landproduct', "App\Http\Controllers\ProductAppController@productlist_8");
 Route::get('productall', "App\Http\Controllers\ProductAppController@productAll");
+Route::get('userData', "App\Http\Controllers\ProductAppController@userData");
 
 Route::middleware('auth:sanctum')->group( function () {
     Route::resource('orders', OrderController::class);
